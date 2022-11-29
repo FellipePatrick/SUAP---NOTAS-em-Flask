@@ -25,7 +25,7 @@ def index():
         me = suap.get('v2/minhas-informacoes/meus-dados')
         return render_template('user.html', user_data=me.data)
     else:
-        return render_template('index.html')
+        return render_template('login1.html')
 
 
 @app.route('/login')
