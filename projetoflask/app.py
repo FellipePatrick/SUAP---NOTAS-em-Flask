@@ -1,4 +1,4 @@
-from flask import Flask, redirect, url_for, session, request, jsonify, render_template
+from flask import Flask, redirect, url_for, session, request, render_template
 from flask_oauthlib.client import OAuth
 
 
@@ -25,7 +25,7 @@ def index():
         me = suap.get('v2/minhas-informacoes/meus-dados')
         return render_template('user.html', user_data=me.data)
     else:
-        return render_template('login1.html')
+        return render_template('index.html')
 
 
 @app.route('/login')
