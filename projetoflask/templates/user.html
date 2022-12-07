@@ -1,7 +1,67 @@
 {% extends 'base.html' %}
 
-{% block title %} {{user_data['nome']}} {% endblock %}
-
 {% block content %}
+    <h2>{% block title %} {{ user_data['nome'] }} {% endblock %}</h2>
+
+    <div class="card card0 border-0">
+      <nav class="navbar navbar-expand-lg bg-light">
+          <div class="container ">
+           <div class="logo d-flex">
+              <img src="https://suap.ifrn.edu.br{{foto}}" width="40" alt="" class="rounded-circle"
+              height="50"
+              alt="Black and White Portrait of a Man"
+              loading="lazy">
+              <div class="nomepessoa my-2 mx-2"  width="50">
+                  <div class="btn-group d-flex">
+                      <button class="btn btn-secondary dropdown-toggle"
+                       type="button" data-bs-toggle="dropdown" aria-expanded="false"
+                       style="background-color: #0000 !important; color:black;border-color: #0000 !important; "
+                       >
+                       <span>Fellipe</span>
+                      </button>
+                      <ul class="dropdown-menu">
+                        <li><a class="dropdown-item" href="#">ID: {{ user_data['id'] }}</a></li>
+                        <li><a class="dropdown-item" href="#">Matricula: {{user_data['matricula']}}
+                        </a></li>
+                      </ul>
+                    </div>
+                    
+              </div>
+           </div>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse  justify-content-end" id="navbarNav">
+              <ul class="navbar-nav">
+                <li class="nav-item">
+                  <a class="nav-link" href="{{url_for('logout')}}">Sair</a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </nav>
+
+        <!--CONTEUDO AQUI-->
+        <div class="container">
+          <div class="row">
+            OLA MUNDO
+          </div>
+        </div>
+
+
+
+      <div class="bg-blue py-4 ">
+          <div class=" px-3 container ">
+              <small class="ml-4 ml-sm-5 mb-2">Copyright &copy; 2022. All rights reserved for COG.</small>
+              <div class="social-contact ml-4 ml-sm-auto">
+                  <span class="fa fa-facebook mr-4 text-sm"></span>
+                  <span class="fa fa-google-plus mr-4 text-sm"></span>
+                  <span class="fa fa-linkedin mr-4 text-sm"></span>
+                  <span class="fa fa-twitter mr-4 mr-sm-5 text-sm"></span>
+              </div>
+          </div>
+      </div>
+  </div>
+
 
 {% endblock %}

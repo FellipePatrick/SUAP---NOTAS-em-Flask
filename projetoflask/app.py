@@ -23,7 +23,7 @@ suap = oauth.remote_app(
 def index():
     if 'suap_token' in session:
         me = suap.get('v2/minhas-informacoes/meus-dados')
-        return render_template('user.html', user_data=me.data)
+        return render_template('user.html', user_data=me.data, foto=me.data['url_foto_150x200'])
     else:
         return render_template('index.html')
 
