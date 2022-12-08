@@ -51,6 +51,12 @@ def authorized():
     session['suap_token'] = (resp['access_token'], '')
     return redirect(url_for('index')) 
 
+@app.route('/user')
+def user():
+    me = suap.get('v2/minhas-informacoes/meus-dados')
+
+    return render_template(user.html, user_data = me.data, foto = me.data['url_foto_150x200'])
+
 
 @suap.tokengetter
 def get_suap_oauth_token():
