@@ -3,6 +3,14 @@
     padding: 0px;
 }
 
+.a1 a {
+    text-decoration: none !important;
+}
+
+.a1 a:hover{
+    color: white;
+}
+
 body {
     color: #000;
     overflow-x: hidden;
